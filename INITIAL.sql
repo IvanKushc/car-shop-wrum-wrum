@@ -4,11 +4,11 @@ CREATE TABLE raw_data.sales (
 id int,
 auto TEXT,
 gasoline_consumption NUMERIC,
-price INTEGER,
+price NUMERIC,
 "date" timestamp,
 person_name TEXT,
 phone TEXT,
 discount NUMERIC,
 brand_origin TEXT);
 
-COPY clients_copy_start(id, name, phone, city) FROM 'C:\Temp\clients.csv' CSV HEADER;
+COPY raw_data.sales(id, auto, gasoline_consumption, price, "date", person_name, phone, discount, brand_origin) FROM 'C:\Temp\cars.csv' CSV HEADER;
