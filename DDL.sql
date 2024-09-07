@@ -21,7 +21,6 @@ CREATE TABLE car_shop.colors (
 
 CREATE TABLE car_shop.cars (
 	id SERIAL PRIMARY KEY,
-	brand_id int REFERENCES car_shop.brands,
 	model_id int REFERENCES car_shop.models,
 	color_id int REFERENCES car_shop.colors);
 	
